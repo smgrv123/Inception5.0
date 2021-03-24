@@ -1,21 +1,59 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import {
+  View,
+  Image,
+} from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import HomeScreen from "./src/HomeScreen";
+import GraphScreen from "./src/GraphScreen";
 
-export default function App() {
+const Stack = createStackNavigator();
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="HomeScreen"
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: "#dbf0f7",
+          },
+        }}
+      >
+        <Stack.Screen
+          name="HomeScreen"
+          component={HomeScreen}
+          options={{
+            title: "",
+            headerLeft: () => (
+              <View style={{ marginLeft: 10 }}>
+                <Image
+                  source={require("./src/images/Header.png")}
+                  style={{ width: 180, height: 30 }}
+                />
+              </View>
+            ),
+          }}
+        />
+        <Stack.Screen
+          name="GraphScreen"
+          component={GraphScreen}
+          options={{
+            title: "",
+            headerLeft: () => (
+              <View style={{ marginLeft: 10 }}>
+                <Image
+                  source={require("./src/images/Header.png")}
+                  style={{ width: 180, height: 30 }}
+                />
+              </View>
+            ),
+          }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
