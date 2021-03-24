@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  View,
-  Image,
-} from "react-native";
+import { View, Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "./src/HomeScreen";
@@ -10,7 +7,7 @@ import GraphScreen from "./src/GraphScreen";
 
 const Stack = createStackNavigator();
 
-const App = () => {
+function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -54,6 +51,6 @@ const App = () => {
       </Stack.Navigator>
     </NavigationContainer>
   );
-};
+}
 
 export default App;

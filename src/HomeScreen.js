@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import LottieView from "lottie-react-native";
 
-export default HomeScreen = ({ navigation }) => {
+export default function HomeScreen({ navigation }) {
   const [userInput, setUserInput] = useState("");
   const [disabled, setDisabled] = useState(true);
   const width = Dimensions.get("screen").width;
@@ -102,8 +102,8 @@ export default HomeScreen = ({ navigation }) => {
                   marginTop: "4%",
                 }}
                 onPress={() => {
-                  navigation.navigate("GraphScreen",{
-                    userInput
+                  navigation.navigate("GraphScreen", {
+                    userInput,
                   });
                 }}
                 disabled={disabled}
@@ -130,4 +130,4 @@ export default HomeScreen = ({ navigation }) => {
       </ImageBackground>
     </View>
   );
-};
+}
