@@ -18,7 +18,7 @@ export default function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1 }}>
       <ImageBackground
-        source={require("../src/images/BG.png")}
+        source={require("../images/BG.png")}
         resizeMode={"cover"}
         style={{ height: height, width: width }}
       >
@@ -36,8 +36,8 @@ export default function HomeScreen({ navigation }) {
               Know your sentiments
             </Text>
             <Text style={{ fontSize: 14, color: "#26538E" }}>
-              You will be exploring our website You will be exploring {"\n"}our
-              websiteYou will be exploring our website
+              An approach to bind NLP and ML together to detect the{`\n`}emotions and
+              sentiments of a person through textual format.
             </Text>
           </View>
           <View style={{ flex: 2.5, justifyContent: "center" }}>
@@ -116,7 +116,7 @@ export default function HomeScreen({ navigation }) {
           </View>
           <View style={{ flex: 4 }}>
             <LottieView
-              source={require("./Lottie/lottie2.json")}
+              source={require("../Lottie/lottie2.json")}
               autoPlay={true}
               loop={true}
               style={{

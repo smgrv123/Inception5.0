@@ -2,8 +2,8 @@ import React from "react";
 import { View, Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import HomeScreen from "./src/HomeScreen";
-import GraphScreen from "./src/GraphScreen";
+import HomeScreen from "./src/screens/HomeScreen";
+import GraphScreen from "./src/screens/GraphScreen";
 
 const Stack = createStackNavigator();
 
